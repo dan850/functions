@@ -43,8 +43,3 @@ function friday() {
 }
 
 
-function saturday() {
-
-
-
-}
