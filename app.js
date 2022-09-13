@@ -23,17 +23,20 @@ const redSoccerPlayer = {
     }
 
   };
+  
 
   let x = blueSoccerPlayer.goals;
+  let y = redSoccerPlayer.goals;
 
-  document.getElementById("demo4").innerHTML = x;
+
+  document.getElementById("goals").innerHTML = x;
   
-  document.getElementById("demo").innerHTML = monday(4,x);
-document.getElementById("demo2").innerHTML = redSoccerPlayer.fullName();
-document.getElementById("demo3").innerHTML = blueSoccerPlayer.fullName();
+  document.getElementById("totalGoals").innerHTML = monday(4,x);
+document.getElementById("redPlayer").innerHTML = redSoccerPlayer.fullName();
+document.getElementById("bluePlayer").innerHTML = blueSoccerPlayer.fullName();
 
 
-
+//const WhichButton = document.getElementById("WhichButton");
 
 
 
@@ -48,23 +51,7 @@ return ActiveHours;
 }
 
 
-function tuesday() {
 
-
-}
-
-
-function wedensday() {
-
-
-
-}
-
-function thursday() {
-
-
-
-}
 
 
 function friday() {
@@ -72,5 +59,16 @@ function friday() {
 
 
 }
+
+
+function WhichButton(event) {
+  
+
+    alert("Player Number: " +  blueSoccerPlayer.playerNumber);
+    
+    
+    alert("Player Goals: " +  blueSoccerPlayer.goals);
+    
+  }
 
 
