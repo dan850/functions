@@ -4,9 +4,7 @@ const redSoccerPlayer = {
     playerNumber: 30,
     goals: 5,
     fullName: function() {
-      return this.firstName + " " + this.lastName + "<br> " 
-      + "PLAYER NUMBER: " + " " + this.playerNumber;
-
+      return this.firstName + " " + this.lastName 
     }
 
   };
@@ -17,8 +15,7 @@ const redSoccerPlayer = {
     playerNumber: 21,
     goals: 4,
     fullName: function() {
-      return this.firstName + " " + this.lastName + "<br> " 
-      + "PLAYER NUMBER: " + " " + this.playerNumber;
+      return this.firstName + " " + this.lastName 
 
     }
 
@@ -29,22 +26,19 @@ const redSoccerPlayer = {
   let y = redSoccerPlayer.goals;
 
 
-  document.getElementById("goals").innerHTML = x;
+//  document.getElementById("goals").innerHTML = x;
   
-  document.getElementById("totalGoals").innerHTML = monday(4,x);
+  document.getElementById("totalGoals").innerHTML = soccerPractice(x,y);
 document.getElementById("redPlayer").innerHTML = redSoccerPlayer.fullName();
 document.getElementById("bluePlayer").innerHTML = blueSoccerPlayer.fullName();
 
+document.getElementById("capName").innerHTML = capString("dan");
+  
 
-//const WhichButton = document.getElementById("WhichButton");
-
-
-
-function monday(work, play) {
+function soccerPractice(work, play) {
 
 
 let ActiveHours = work * play;
-//console.log(ActiveHours)
 
 return ActiveHours;
 
@@ -54,10 +48,10 @@ return ActiveHours;
 
 
 
-function friday() {
+function capString(name) {
 
 
-
+  return name.toUpperCase();
 }
 
 
@@ -68,6 +62,16 @@ function WhichButton(event) {
     
     
     alert("Player Goals: " +  blueSoccerPlayer.goals);
+    
+  }
+
+  function WhichButton2(event) {
+  
+
+    alert("Player Number: " +  redSoccerPlayer.playerNumber);
+    
+    
+    alert("Player Goals: " +  redSoccerPlayer.goals);
     
   }
 
